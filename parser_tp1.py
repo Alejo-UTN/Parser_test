@@ -30,13 +30,14 @@ tabla = {
         "MOSTRAR":       [ "estructura" , "program"],
         "FUN" :          [ "estructura" , "program"],
         "ID" :           [ "estructura" , "program"],
+        "," :            [],
         "#" :            []
     };
     "estructura":{
-        "SI":           ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","FUN","program"],
-        "ENTONCES" :    [ "FUN","program"],
-        "HASTA" :       ["HASTA","expresion","program"],
-        "REPETIR" :     ["REPETIR", "FUN", "program", "HASTA", "expresion", "program"],
+        "SI":           ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","FUN","program","," ],
+        "ENTONCES" :    [ "FUN","program",","],
+        "HASTA" :       ["HASTA","expresion","program",","],
+        "REPETIR" :     ["REPETIR", "FUN", "program", "HASTA", "expresion", "program", ","],
         "MOSTRAR" :     ["MOSTRAR", "expresion"],
         "LEER" :        ["LEER", "expresion"],
         "ID" :          ["ID", "expresion"]
@@ -49,7 +50,20 @@ tabla = {
         "ID" : ["termino","expresion2"],
         "NUMERO": ["termino", "expresion2"]
     };
+    #Se hace asi por la jerarquia de la suma y la mltiplicacion, con los terminos siendo multiplicaciones y las expresion 2 las sumas
     "expresion2":{
+        "+":        ["+", "Termino", "Expresion" ],
+        "SI":       [],
+        "ENTONCES": [],
+        "HASTA":    [],
+        "REPETIR":  [],
+        "MOSTRAR":  [],
+        "LEER":     [],
+        "ID":       []
+    };
+    "termino":{
+        "ID":     ["factor", "termino2"],
+        "NUMERO": ["factor", "termino2"],
         
 
 
