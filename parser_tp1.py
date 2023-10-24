@@ -95,7 +95,47 @@ def parse(cadena)
     derivaciones = []
     #"Puntero"
     pointer = 0
+    #Variable para romper el ciclo
+    i = 1
+    while i = 1:
+        #Le meto el tope de la pila a top ||Nota a mi mismo: poner un indice negativo empieza a contar desde el tope -1 es el tope||
+        top = pila[-1]
+        #Formula para consumir lo de la pila
+        if top in VT:
+            if top == cadena[pointer]:
+                #Consumimos ||Nota personal: Pop le hace POP! a lo que le digas y lo borra
+                pila.pop()
+                pointer = pointer + 1
+            else:
+                #Abandonamos porque no pertenece
+                print("La cadena no pertenece al lenuaje")
+                seg = 0
+        else: 
+        
 
+
+
+
+
+
+
+
+
+
+
+
+        
+        #Ahora determinamos que significa que la cadena sea aceptada y creamos la condicion
+        if (top == '#'):
+            if (cadena[pointer] == "#"):
+                print("La cadena es aceptadoa por el lenguaje")
+                for j in derivaciones: print(j)
+        
+
+
+            
+            
+    
 
 
 
