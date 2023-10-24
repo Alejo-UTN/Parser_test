@@ -82,5 +82,8 @@ tabla = {
 }
         
 
-
+# listas de V.Terminales
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
+
+#codigo parser
+
