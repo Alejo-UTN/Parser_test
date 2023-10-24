@@ -37,8 +37,11 @@ tabla = {
         "SINO" : [ "FUN","FINFUN","LEER","MOSTAR","ID"],
     };
     "valor":{
-        
-         
+        "ID" :  ["ID"],
+        "NUMERO":  ["NUMERO"]
+    };
+    "expresion":{
+        "(" : []
 
 
 
