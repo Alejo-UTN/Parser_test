@@ -86,4 +86,19 @@ tabla = {
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
 
 #codigo parser
+def parse(cadena)
+    #Vamos a tenre una pila con el EOF y el simbolo distinguido
+    pila = ["#", "program"]
+    #Variable temporal para la derivacion actual, le damos el SD
+    der = ["program"]
+    #Variable para almacenar las derivaciones
+    derivaciones = []
+    #"Puntero"
+    pointer = 0
+
+
+
+
+
+
 
