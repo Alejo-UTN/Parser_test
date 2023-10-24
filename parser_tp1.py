@@ -21,7 +21,7 @@ def genDerivaciones(topePila, prodAnterior, derivacion)
 
 # tabla[Columna][Fila]
 tabla = {
-    "program": {
+    "program":{
         "ENTONCES" :     [ "estructura" , "program"],
         "REPERTIR" :     [ "estructura" , "program"],
         "HASTA" :        [ "estructura" , "program"],
