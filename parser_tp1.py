@@ -110,21 +110,6 @@ def parse(cadena)
                 #Abandonamos porque no pertenece
                 print("La cadena no pertenece al lenuaje")
                 seg = 0
-        else: 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
         #Ahora determinamos que significa que la cadena sea aceptada y creamos la condicion
         if (top == '#'):
             if (cadena[pointer] == "#"):
