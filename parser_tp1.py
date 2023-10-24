@@ -33,9 +33,10 @@ tabla = {
         "#" :            []
     };
     "estructura":{
-        "SI":   ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","program","," ]
-        "SINO" : [ "FUN","FINFUN","LEER","MOSTAR","FUN"],
-    };
+        "SI":   ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","program","," ],
+        "ENTONCES" : [ "FUN","program",","],
+        
+       
     "valor":{
         "ID" :  ["ID"],
         "NUMERO":  ["NUMERO"]
