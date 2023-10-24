@@ -12,7 +12,7 @@ def genDerivaciones(topePila, prodAnterior, derivacion)
     indice = prodAnterior.index(topePila)
     #limpio el elemento a derivar
     prodAnterior.remove(topePila)
-
+    return prodAnterior
 
 # "program -> estructura program" tiene como simbolos directrices a: "ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI"...
 # El EOF es el simbolo #
