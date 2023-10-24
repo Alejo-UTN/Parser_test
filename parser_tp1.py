@@ -14,7 +14,7 @@ def genDerivaciones(topePila, prodAnterior, derivacion)
     prodAnterior.remove(topePila)
 
 
-# "Program -> Estructura Program" tiene como simbolos directrices a: "ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI"...
+# "program -> estructura program" tiene como simbolos directrices a: "ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI"...
 # El EOF es el simbolo #
 
 #NOTA TEMPORAL:Los NT van en minuscula y los T en mayuscula.|  Program es un NT que deriva excluyentemente en ENTONCES, SINO, etc,etc. Luego continua con un estructura o program.
@@ -23,20 +23,18 @@ def genDerivaciones(topePila, prodAnterior, derivacion)
 tabla = {
     "program": {
         "ENTONCES" :     [ "estructura" , "program"],
-        "SINO" :         [ "estructura" , "program"],
-        "FINSI" :        [ "estructura" , "program"],
         "REPERTIR" :     [ "estructura" , "program"],
         "HASTA" :        [ "estructura" , "program"],
         "SI" :           [ "estructura" , "program"],
         "LEER" :         [ "estructura" , "program"],
         "FUN" :          [ "estructura" , "program"],
-        "FINFUC" :       [ "estructura" , "program"],
         "ID" :           [ "estructura" , "program"],
+        "," :            [],
         "#" :            []
     };
     "estructura":{
-        "ENTONCES" : [ "FUN","FINFUN","LEER","MOSTAR","ID"],
-        "SINO" : [ "FUN","FINFUN","LEER","MOSTAR","ID"],
+        "SI":   ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","program","," ]
+        "SINO" : [ "FUN","FINFUN","LEER","MOSTAR","FUN"],
     };
     "valor":{
         "ID" :  ["ID"],
@@ -45,6 +43,6 @@ tabla = {
     "expresion":{
         "(" : []
 
-#Gola como te va
+
 
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
