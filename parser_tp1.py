@@ -78,8 +78,8 @@ tabla = {
     "factor":{
         "ID":       ["valor"],
         "NUMERO":   ["valor"]
-     },
-    },
+     }
+}
         
 
 
