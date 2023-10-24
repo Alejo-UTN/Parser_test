@@ -43,6 +43,6 @@ tabla = {
     "expresion":{
         "(" : []
 
-
+#Gola como te va
 
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
