@@ -34,20 +34,24 @@ tabla = {
         "#" :            []
     };
     "estructura":{
-        "SI":        ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","FUN","program","," ],
-        "ENTONCES" : [ "FUN","program",","],
-        "HASTA" :    ["HASTA","expresion","program",","],
-        "REPETIR" :  ["REPETIR", "FUN", "program", "HASTA", "expresion", "program", ","],
-        "MOSTRAR" :  ["MOSTRAR", "expresion",]
-        
-       
+        "SI":           ["SI","expresion", "ENTONCES", "FUN", "program",",","SINO","FUN","program","," ],
+        "ENTONCES" :    [ "FUN","program",","],
+        "HASTA" :       ["HASTA","expresion","program",","],
+        "REPETIR" :     ["REPETIR", "FUN", "program", "HASTA", "expresion", "program", ","],
+        "MOSTRAR" :     ["MOSTRAR", "expresion"],
+        "LEER" :        ["LEER", "expresion"],
+        "ID" :          ["ID", "expresion"]
+    };
     "valor":{
         "ID" :  ["ID"],
         "NUMERO":  ["NUMERO"]
     };
     "expresion":{
-        "(" : []
-
+        "ID" : ["termino","expresion2"],
+        "NUMERO": ["termino", "expresion2"]
+    };
+    "expresion2":{
+        
 
 
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
