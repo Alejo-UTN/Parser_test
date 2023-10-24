@@ -17,6 +17,8 @@ def genDerivaciones(topePila, prodAnterior, derivacion)
 # "Program -> Estructura Program" tiene como simbolos directrices a: "ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI"...
 # El EOF es el simbolo #
 
+#NOTA TEMPORAL:Los NT van en minuscula y los T en mayuscula.|  Program es un NT que deriva excluyentemente en ENTONCES, SINO, etc,etc. Luego continua con un estructura o program.
+
 # tabla[Columna][Fila]
 tabla = {
     "program": {
