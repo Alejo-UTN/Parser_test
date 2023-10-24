@@ -74,7 +74,7 @@ tabla = {
         "MOSTRAR":  [],
         "LEER":     [],
         "ID":       []
-    {,
+    },
     "factor":{
         "ID":       ["valor"],
         "NUMERO":   ["valor"]
