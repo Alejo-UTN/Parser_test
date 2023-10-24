@@ -28,6 +28,17 @@ tabla = {
         "SI" :           [ "estructura" , "program"],
         "LEER" :         [ "estructura" , "program"],
         "FUN" :          [ "estructura" , "program"],
+        "FINFUC" :       [ "estructura" , "program"],
+        "ID" :           [ "estructura" , "program"],
+        "#" :            []
+    };
+    "estructura":{
+        "ENTONCES" : [ "FUN","FINFUN","LEER","MOSTAR","ID"],
+        "SINO" : [ "FUN","FINFUN","LEER","MOSTAR","ID"],
+    };
+    "valor":{
+        
+         
 
 
 
