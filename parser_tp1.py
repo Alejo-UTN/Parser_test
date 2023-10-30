@@ -12,6 +12,15 @@ def genDerivaciones(topePila, prodAnterior, derivacion)
     indice = prodAnterior.index(topePila)
     #limpio el elemento a derivar
     prodAnterior.remove(topePila)
+    # Damos vuelta la lista de 'derivacion' para que luego al insertarla quede en el orden original
+    produccionReversed = []
+    for i in derivacion:
+        produccionReversed.insert(0, i)
+
+    # Insertamos la lista dada vuelta en la cadena a derivar
+    for i in produccionReversed:
+        prodAnterior.insert(indice, i)
+    
     return prodAnterior
 
 # "program -> estructura program" tiene como simbolos directrices a: "ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI"...
