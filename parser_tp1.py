@@ -43,8 +43,8 @@ tabla = {
         "#" :            []
     },
     "estructura":{
-        "SI":           ["SI","expresion", "ENTONCES", "FUN", "program","SINO","FUN","program"],
-        "ENTONCES" :    [ "FUN","program",","],
+        "SI":           ["SI","expresion", "ENTONCES", "FUN", "program",",", "SINO","FUN","program"],
+        "ENTONCES" :    [ "FUN","program"],
         "HASTA" :       ["HASTA","expresion","program"],
         "REPETIR" :     ["REPETIR", "FUN", "program", "HASTA", "expresion", "program"],
         "MOSTRAR" :     ["MOSTRAR", "expresion"],
