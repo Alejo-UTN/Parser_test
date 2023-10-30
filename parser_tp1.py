@@ -49,7 +49,7 @@ tabla = {
         "REPETIR" :     ["REPETIR", "FUN", "program", "HASTA", "expresion", "program"],
         "MOSTRAR" :     ["MOSTRAR", "expresion"],
         "LEER" :        ["LEER", "expresion"],
-        "ID" :          ["ID", "expresion"]
+        "ID" :          ["ID", "=", "expresion"]
     },
     "valor":{
         "ID" :  ["ID"],
