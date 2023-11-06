@@ -7,9 +7,10 @@ cadenaPrueba = [
   " LEER var",
   " MOSTRAR x + 9",
   " ID = ID ",
-  " REPETIR FUN 2+2 HASTA 4 "
-  "
-  
+  " REPETIR FUN 2+2 HASTA 4 ",
+  " x = 70",
+  " MOSTRAR x * 10",
+  "SI var > var ENTONCES FUN, SINO FUN"
 ]
 i = 1
 for ejemplo in cadenaPrueba:
