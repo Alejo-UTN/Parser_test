@@ -7,7 +7,7 @@ def traduccionParser(salidaLexer):
     cadena.append('#')
     return cadena
 
-def genDerivaciones(topePila, prodAnterior, derivacion)
+def genDerivaciones(topePila, prodAnterior, derivacion):
     #wea para saber la posicion del elemento a derivar
     indice = prodAnterior.index(topePila)
     #limpio el elemento a derivar
@@ -92,7 +92,7 @@ tabla = {
         
 
 # listas de V.Terminales
-VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
+VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
 
 #codigo parser
 def parse(cadena)
@@ -106,7 +106,7 @@ def parse(cadena)
     pointer = 0
     #Variable para romper el ciclo
     i = 1
-    while i = 1:
+    while i == 1:
         #Le meto el tope de la pila a top ||Nota a mi mismo: poner un indice negativo empieza a contar desde el tope -1 es el tope||
         top = pila[-1]
         #Formula para consumir lo de la pila
