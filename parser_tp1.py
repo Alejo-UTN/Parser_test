@@ -95,7 +95,7 @@ tabla = {
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
 
 #codigo parser
-def parse(cadena)
+def parse(cadena):
     #Vamos a tenre una pila con el EOF y el simbolo distinguido
     pila = ["#", "program"]
     #Variable temporal para la derivacion actual, le damos el SD
@@ -124,6 +124,7 @@ def parse(cadena)
             if (cadena[pointer] == "#"):
                 print("La cadena es aceptadoa por el lenguaje")
                 for j in derivaciones: print(j)
+                seg = 0
         
 
 
