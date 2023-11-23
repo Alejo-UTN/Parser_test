@@ -146,3 +146,8 @@ def genDerivacion(topePila, produccionAnterior, derivacion):
         produccionAnterior.insert(indice, i)
 
     return produccionAnterior
+
+#AIUDAAAAAAAAAAAAA
+
+
+
