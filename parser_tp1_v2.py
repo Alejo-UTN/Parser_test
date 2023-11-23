@@ -115,3 +115,30 @@ tabla ={
         "ID":["ID"]
     }
 }
+
+def traduccionParser(salidaLexer):
+    cadena = []
+    # Ponemos cada primer elemento de cada tupla (token) en una lista
+    for tupla in salidaLexer:
+        cadena.append(tupla[0])
+    cadena.append('#')
+    return cadena
+
+# Función que genera las derivaciones, recibe el elemento a derivar, en que cadena y por que se deriva
+
+
+def genDerivacion(topePila, produccionAnterior, derivacion):
+    # Obtenemos en que posición se encuentra el elemento a derivar
+    indice = produccionAnterior.index(topePila)
+    # Eliminamos el elemento a derivar
+    produccionAnterior.remove(topePila)
+    # Damos vuelta la lista de 'derivacion' para que luego al insertarla quede en el orden original
+    produccionInvertida = []
+    for i in derivacion:
+        produccionInvertida.insert(0, i)
+
+    # Insertamos la lista dada vuelta en la cadena a derivar
+    for i in produccionInvertida:
+        produccionAnterior.insert(indice, i)
+
+    return produccionAnterior
