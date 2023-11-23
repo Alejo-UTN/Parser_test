@@ -14,7 +14,7 @@ tabla ={
         "FUN":["ListSentencia"],
         "MOSTRAR":["ListSentencia"],
         "ID":["ListSentencia"]
-    }, #gracias pibes por la ayuda 
+    }, 
     "ListSentencia":{
         "SI": ["Sentencia","ListSentencia"],
         "REPERTIR":["Sentencia","ListSentencia"],
@@ -25,6 +25,7 @@ tabla ={
     },
     "ListSentenciaP":{
         ";":[";","Sentencia","ListSentenciaP"],
+        ",":[",","Sentencia","ListSentenciaP"],
         "#":[],
         "SINO":[],
         "FINSI":[],
@@ -71,6 +72,7 @@ tabla ={
         ">,<,>=,<=":[">,<,>=,<=","Expresion2"],
         "=":[],
         ";":[],
+        ",":[],
         "#":[],
         "FINFUC":[],
         "FINSI":[],
@@ -89,6 +91,7 @@ tabla ={
         "#":[],
         "FINSI":[],
         ";":[],
+        ",":[],
         "FINFUC":[],
         "SINO":[],
         "HASTA":[],
@@ -104,7 +107,9 @@ tabla ={
         ">,<,>=,<=":[],
         "=":[],
         "#":[],
+        ",":[],
         ";":[],
+        "FINFUC":[],
         "FINFUC":[],
         "SINO":[],
         "HASTA":[],
@@ -115,7 +120,6 @@ tabla ={
         "ID":["ID"]
     }
 }
-
 def traduccionParser(salidaLexer):
     cadena = []
     # Ponemos cada primer elemento de cada tupla (token) en una lista
