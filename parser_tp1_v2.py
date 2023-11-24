@@ -3,7 +3,8 @@ VN = [ "Program","ListSentencia","ListSentenciaP","SentSi","SentenciaSiP","SentR
 "SentMostar","SentFun","Proc","ListPar","ListParP","Expresion","ExpresionP",
 "Expresion2","Expresion2P","Termino","TerminoP","Factor"]
 
-VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUN", "FINFUC", "=", "," , ";", ">,<,<=,>=", "NUMERO", "ID"]
+VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUN", "FINFUC", "=" , ";", ">,<,<=,>="#este seria op rel , y faltan "()" para los parentesis
+      , "NUMERO", "ID"]
 
 
 tabla ={
@@ -54,20 +55,25 @@ tabla ={
         "FUN":["FUN","Proc","FINFUC"]
     },
     "Proc":{
-        "ID":["ID","ListaPar","ListSentencia"]
+        "ID":["ID",#"(",
+              "ListaPar",#")"
+              "ListSentencia"]
     },
     "ListaPar":{
         "ID":["ID","ListaParP"]
     },
     "ListaParP":{
-        ";":[";","ID","ListaParP"]
+        ";":[";","ID","ListaParP"],
+        #")":[]
     },
     "Expresion":{
+        # "(": ['Expresion2','ExpresionP'],
         "NUMERO":["Expresion2","ExpresionP"],
         "ID":["Expresion2","ExpresionP"]
     },
     "ExpresionP":{
         ">,<,>=,<=":[">,<,>=,<=","Expresion2"],
+        # ")":[],
         "=":[],
         ";":[],
         "#":[],
@@ -78,12 +84,14 @@ tabla ={
         "ENTONCES":[]
     },
     "Expresion2":{
+        #"(": ['Termino', 'Expresion2P'],
         "NUMERO":["Termino","Expresion2P"],
         "ID":["Termino","Expresion2P"]
     },
     "Expresion2P":{
         "+":["+","Termino","Expresion2P"],
         ">,<,>=,<=":[],
+        #aca va ")":[],
         "=":[],
         "#":[],
         "FINSI":[],
@@ -94,6 +102,7 @@ tabla ={
         "ENTONCES":[]
     },
     "Termino":{
+        # "(": ['Factor', 'TerminoP'],
         "NUMERO":["Factor","TerminoP"],
         "ID":["FACTOR","TerminoP"]
     },
@@ -102,6 +111,7 @@ tabla ={
         "+":[],
         ">,<,>=,<=":[],
         "=":[],
+        #aca va ")":[],
         "#":[],
         ";":[],
         "FINFUC":[],
@@ -111,6 +121,7 @@ tabla ={
         "ENTONCES":[]
     },
     "Factor":{
+        # ")":["(","Expresion",")"],
         "NUMERO":["NUMERO"],
         "ID":["ID"]
     }
