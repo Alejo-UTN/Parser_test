@@ -119,6 +119,65 @@ tabla ={
         "ID":["ID"]
     }
 }
+# Función principal
+def parser(cadena):
+    # Iniciamos la pila con el simbolo EOF (#) y el simbolo distinguido
+    pila = ['#', 'Program']
+    simboloApuntado = 0
+    # Lista donde se trabaja con las derivaciones en cada ciclo
+    derivacion = ['Program']
+    # Lista donde se guardan todas las derivaciones
+    derivaciones = []
+
+    # Flag para salir del ciclo principal
+    continuar = True
+
+    # Ciclo principal
+    while continuar:
+        # Actualizamos el valor del tope
+        tope = pila[-1]
+
+        # Condición de éxito
+        if (tope == '#') and (cadena[simboloApuntado] == '#'):
+            print("La cadena es aceptada por el lenguaje")
+            print("Derivaciones:")
+            for i in derivaciones:
+                print(i)
+            break
+            
+        if tope in VT:
+            if tope == cadena[simboloApuntado]:
+                # Consumimos el último elemento de la pila
+                pila.pop()
+                # Avanzamos el puntero en un elemento
+                simboloApuntado += 1
+            
+            # Si no se cumple la condición salimos del ciclo
+            else:
+                continuar = False
+                print("La cadena no pertenece al lenguaje")
+        else:
+            # Intentamos obtener el elemento de la tabla en la posición indicada
+            try:
+                produccionTabla = tabla[tope][cadena[simboloApuntado]]
+                # Damos vuelta la producción
+                produccionReversed = []
+                for i in produccionTabla:
+                    # Insertamos todos los elementos en la posición 0 de la nueva lista
+                    produccionReversed.insert(0, i)
+                # Consumimos el último elemento de la pila
+                pila.pop()
+                # Agregamos la producción dada vuelta a la pila
+                pila.extend(produccionReversed)
+                # Guardamos la derivación
+                derivacion = generarDerivacion(tope, derivacion, produccionTabla)
+                # El .copy() es necesario porque sino se copian las referencias y tendriamos una lista con 5 elementos iguales
+                derivaciones.append(derivacion.copy())
+
+            # Si hay error salimos del ciclo   
+            except:
+                continuar = False
+                print("La cadena no pertenece al lenguaje")
 #AIUDAAAAAAAAAAAAA
 
 
