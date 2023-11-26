@@ -397,7 +397,27 @@ def afdtoken16(lexema):
     else:
         return estadonofinal
     ##   chequeado fue una paja hacerlo 
-# adf para token 17 num 
+
+#adf para token 17 ()
+def afdtoken17(lexema):
+    estado17 = 0
+    estadofinal17 = [1, 2]
+    for caracter in lexema
+        if estado 17 == 0 and caracter == "(":
+            estado17 = 1
+        elif estado17 == 0 and caracter == ")"
+            estado17 = 2
+        else:
+            estado17 =-1
+            break
+    if estado17 == -1:
+        return estadotrampa
+    if estado17 in estadofinal17
+        return estadofinal
+    else:
+        return estadofinal
+    
+# adf para token 18 num 
 def afdtoken18(lexema):
     estado18 = 0
     estadofinal18 = [1]
@@ -445,7 +465,7 @@ def afdtoken19(lexema):    # este usa la misma estrutuctura que el adf anterior 
 
 
 
-posibles_tokens = [("ENTONCES", afdtoken1),("SINO",afdtoken2),("FINSI",afdtoken3),("REPETIR",afdtoken4),("HASTA",afdtoken5),("SI",afdtoken6),("+",afdtoken7),("*",afdtoken8),("LEER",afdtoken9),("MOSTRAR",afdtoken10),("FUNC",afdtoken11),("FINFUNC",afdtoken12),("=",afdtoken13),(",",afdtoken14),(";",afdtoken15),(">,<,<=,>=",afdtoken16),("NUMERO",afdtoken18),("ID",afdtoken19)]
+posibles_tokens = [("ENTONCES", afdtoken1),("SINO",afdtoken2),("FINSI",afdtoken3),("REPETIR",afdtoken4),("HASTA",afdtoken5),("SI",afdtoken6),("+",afdtoken7),("*",afdtoken8),("LEER",afdtoken9),("MOSTRAR",afdtoken10),("FUNC",afdtoken11),("FINFUNC",afdtoken12),("=",afdtoken13),(",",afdtoken14),(";",afdtoken15),(">,<,<=,>=",afdtoken16),("(,)",afdtoken17),("NUMERO",afdtoken18),("ID",afdtoken19)]
 
 
 
