@@ -55,25 +55,23 @@ tabla ={
         "FUN":["FUN","Proc","FINFUC"]
     },
     "Proc":{
-        "ID":["ID",#"(",
-              "ListaPar",#")"
-              "ListSentencia"]
+        "ID":["ID","(","ListaPar",")" "ListSentencia"]
     },
     "ListaPar":{
         "ID":["ID","ListaParP"]
     },
     "ListaParP":{
         ";":[";","ID","ListaParP"],
-        #")":[]
+        ")":[]
     },
     "Expresion":{
-        # "(": ['Expresion2','ExpresionP'],
+        "(": ['Expresion2','ExpresionP'],
         "NUMERO":["Expresion2","ExpresionP"],
         "ID":["Expresion2","ExpresionP"]
     },
     "ExpresionP":{
         ">,<,>=,<=":[">,<,>=,<=","Expresion2"],
-        # ")":[],
+        ")":[],
         "=":[],
         ";":[],
         "#":[],
@@ -84,14 +82,14 @@ tabla ={
         "ENTONCES":[]
     },
     "Expresion2":{
-        #"(": ['Termino', 'Expresion2P'],
+        "(": ['Termino', 'Expresion2P'],
         "NUMERO":["Termino","Expresion2P"],
         "ID":["Termino","Expresion2P"]
     },
     "Expresion2P":{
         "+":["+","Termino","Expresion2P"],
         ">,<,>=,<=":[],
-        #aca va ")":[],
+        ")":[],
         "=":[],
         "#":[],
         "FINSI":[],
@@ -102,7 +100,7 @@ tabla ={
         "ENTONCES":[]
     },
     "Termino":{
-        # "(": ['Factor', 'TerminoP'],
+        "(": ['Factor', 'TerminoP'],
         "NUMERO":["Factor","TerminoP"],
         "ID":["FACTOR","TerminoP"]
     },
@@ -111,7 +109,7 @@ tabla ={
         "+":[],
         ">,<,>=,<=":[],
         "=":[],
-        #aca va ")":[],
+        ")":[],
         "#":[],
         ";":[],
         "FINFUC":[],
@@ -121,7 +119,7 @@ tabla ={
         "ENTONCES":[]
     },
     "Factor":{
-        # ")":["(","Expresion",")"],
+        ")":["(","Expresion",")"],
         "NUMERO":["NUMERO"],
         "ID":["ID"]
     }
