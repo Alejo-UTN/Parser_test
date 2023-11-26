@@ -119,7 +119,7 @@ tabla ={
         "ENTONCES":[]
     },
     "Factor":{
-        ")":["(","Expresion",")"],
+        "(":["(","Expresion",")"],
         "NUMERO":["NUMERO"],
         "ID":["ID"]
     }
