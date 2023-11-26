@@ -10,7 +10,7 @@ parser(traduccionParser(lexer("mostrar 5")))
 parser(traduccionParser(lexer("repetir mostrar 3 hasta aux3")))
 parser(traduccionParser(lexer("si 5>5 entonces mostrar x+6 finsi")))
 parser(traduccionParser(lexer("mostrar x+3")))
-parser(traduccionParser(lexer("func rest(n1; n2) x equal n1 - n2; mostrar x finfunc")))
+parser(traduccionParser(lexer("leer variable")))
 parser(traduccionParser(lexer("mostrar x + 5")))
 
 i = 1
