@@ -1,14 +1,13 @@
 from Lexer_tp import *
-VN = [ "Program","ListSentencia","ListSentenciaP","SentSi","SentenciaSiP","SentRepetir","SentAsignar","SentLeer",
+VN = [ "Program","ListSentencia","ListSentenciaP","Sentencia","SentSi","SentenciaSiP","SentRepetir","SentAsignar","SentLeer",
 "SentMostar","SentFun","Proc","ListPar","ListParP","Expresion","ExpresionP",
 "Expresion2","Expresion2P","Termino","TerminoP","Factor"]
 
-VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUN", "FINFUC", "=" , ";", ">,<,<=,>="#este seria op rel , y faltan "()" para los parentesis
-      , "NUMERO", "ID"]
+VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUN", "FINFUC", "=" , ";","(",")", ">,<,<=,>=", "NUMERO", "ID"]
 #como nota, al todavia no saber si hay que agregarle al lexer los parentesis, los dejo como nota
 
 tabla ={
-    'Program':{
+    "Program":{
         "SI": ["ListSentencia"],
         "REPERTIR":["ListSentencia"],
         "LEER":["ListSentencia"],
@@ -32,6 +31,15 @@ tabla ={
         "HASTA":[],
         "FINFUC":[]
     },
+    "Sentencia":{
+        "SI":["SentSI"],
+        "REPETIR":["SentRepetir"],
+        "LEER":["SentLEER"],
+        "FUN":["SentFUN"],
+        "ID":["SentAsignar"],
+        "MOSTAR":["SentMostar"]   
+    },
+
     "SentSI":{
         "SI":["SI","Expresion","ENTONCES","ListSentencia","SentenciaSiP"],
     },
@@ -155,10 +163,10 @@ def genDerivacion(topePila, produccionAnterior, derivacion):
 # Función principal
 def parser(cadena):
     # Iniciamos la pila con el simbolo EOF (#) y el simbolo distinguido
-    pila = ['#', 'Program']
+    pila = ['#', "Program"]
     simboloApuntado = 0
     # Lista donde se trabaja con las derivaciones en cada ciclo
-    derivacion = ['Program']
+    derivacion = ["Program"]
     # Lista donde se guardan todas las derivaciones
     derivaciones = []
 
@@ -213,6 +221,8 @@ def parser(cadena):
                 print("La cadena no pertenece al lenguaje")
 
 #AIUDAAAAAAAAAAAAA
+
+
 
 
 
