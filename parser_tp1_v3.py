@@ -55,6 +55,7 @@ tabla ={
     },
     "SentLeer":{
         "LEER":["LEER","ID"]
+
     },
     "SentMostrar":{
         "MOSTRAR":["MOSTRAR","Expresion"]
@@ -63,7 +64,7 @@ tabla ={
         "FUNC":["FUNC","Proc","FINFUNC"]
     },
     "Proc":{
-        "ID":["ID","(","ListaPar",")" "ListSentencia"]
+        "ID":["ID","(","ListaPar",")", "ListSentencia"]
     },
     "ListaPar":{
         "ID":["ID","ListaParP"]
@@ -173,5 +174,5 @@ def parser(codigo_fuente):
     
     return principal()
 
-print(lexer("mostrar"))
-#print(parser(lexer("alejo=1")))
+#print(lexer("mostrar"))
+#print(parser(lexer("si 5>5 entonces mostrar (x+5 ) finsi")))
