@@ -243,7 +243,7 @@ def afdtoken10(lexema):
     estadofinal10 = [7]
     for caracter in lexema : 
         if estado10 == 0 and caracter =='m':
-           esatdo10 = 1 
+           estado10 = 1 
         elif estado10 == 1 and caracter == 'o':
            estado10 = 2   
         elif estado10 == 2 and caracter == 's':
