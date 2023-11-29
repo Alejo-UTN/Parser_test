@@ -4,7 +4,6 @@ VN = [ "Program","ListSentencia","ListSentenciaP","Sentencia","SentSi","Sentenci
 "Expresion2","Expresion2P","Termino","TerminoP","Factor"]
 
 VT = ["ENTONCES", "SINO", "FINSI", "REPETIR", "HASTA", "SI", "+", "*", "LEER", "MOSTRAR", "FUNC", "FINFUNC", "=" , ";","(",")", "OPrel", "NUMERO", "ID"]
-#como nota, al todavia no saber si hay que agregarle al lexer los parentesis, los dejo como nota
 
 tabla ={
     "Program":{
