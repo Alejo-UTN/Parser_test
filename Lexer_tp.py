@@ -401,21 +401,37 @@ def afdtoken16(lexema):
 #adf para token 17 ()
 def afdtoken17(lexema):
     estado17 = 0
-    estadofinal17 = [1, 2]
-    for caracter in lexema
-        if estado 17 == 0 and caracter == "(":
+    estadofinal17 = [1]
+    for caracter in lexema:
+        if estado17 == 0 and caracter == "(":
             estado17 = 1
-        elif estado17 == 0 and caracter == ")"
-            estado17 = 2
         else:
             estado17 =-1
             break
     if estado17 == -1:
         return estadotrampa
-    if estado17 in estadofinal17
+    if estado17 in estadofinal17:
         return estadofinal
     else:
+        return estadonofinal
+
+#afd para el otro parentesis
+def afdtoken20(lexema):
+    estado20 = 0
+    estadofinal20 = [1]
+    for caracter in lexema:
+        if estado20 == 0 and caracter == ")":
+            estado20 = 1
+        else:
+            estado20 = -1
+            break
+    if estado20 == -1:
+        return estadotrampa
+    if estado20 in estadofinal20:
         return estadofinal
+    else:
+        return estadonofinal
+
     
 # adf para token 18 num 
 def afdtoken18(lexema):
@@ -465,8 +481,8 @@ def afdtoken19(lexema):    # este usa la misma estrutuctura que el adf anterior 
 
 
 
-posibles_tokens = [("ENTONCES", afdtoken1),("SINO",afdtoken2),("FINSI",afdtoken3),("REPETIR",afdtoken4),("HASTA",afdtoken5),("SI",afdtoken6),("+",afdtoken7),("*",afdtoken8),("LEER",afdtoken9),("MOSTRAR",afdtoken10),("FUNC",afdtoken11),("FINFUNC",afdtoken12),("=",afdtoken13),(",",afdtoken14),(";",afdtoken15),(">,<,<=,>=",afdtoken16),("(,)",afdtoken17),("NUMERO",afdtoken18),("ID",afdtoken19)]
-
+posibles_tokens = [("ENTONCES", afdtoken1),("SINO",afdtoken2),("FINSI",afdtoken3),("REPETIR",afdtoken4),("HASTA",afdtoken5),("SI",afdtoken6),("+",afdtoken7),("*",afdtoken8),("LEER",afdtoken9),("MOSTRAR",afdtoken10),("FUNC",afdtoken11),("FINFUNC",afdtoken12),("=",afdtoken13),(",",afdtoken14),(";",afdtoken15),("OPrel",afdtoken16),("(",afdtoken17),("NUMERO",afdtoken18),("ID",afdtoken19),(")",afdtoken20)]
+#los tokens de parentesis es uno para cada uno, editar
 
 
 
@@ -508,6 +524,8 @@ def lexer(codigo):
         un_tipo_de_token = tokens_posibles[0]
         token = (un_tipo_de_token, codigo[comienzo_lexema:posicion])
         tokens.append(token)
+    
+    tokens.append(('#','#'))
     return tokens
 
 
